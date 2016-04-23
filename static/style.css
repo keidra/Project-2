@@ -1,5 +1,5 @@
 body {
-  background-color: lightblue;
+  background-color: white;
   height: 100%;
 }
 
@@ -13,4 +13,19 @@ body {
 .username {
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* NavBar Styling */
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 3px solid black;
+}
+
+@media (min-width: 768px) {
+.navbar {
+  border-radius: 0px;
+}
+
 }

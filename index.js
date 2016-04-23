@@ -5,13 +5,21 @@ var ejsLayouts = require('express-ejs-layouts');
 var flash = require('connect-flash');
 var session = require('express-session');
 
+// var tweetCtrl = require('./controllers/tweet');
+var db = require('./models');
 
 var app = express();
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/static'));
+app.use(session({
+  secret: 'dsalkfjasdflkjgdfblknbadiadsnkl',
+  resave: false,
+  saveUninitialized: true
+}));
 
+// app.use('/tweets', tweetCtrl);
 
 app.use(flash());
 
@@ -35,7 +43,7 @@ app.post('/auth/signup', function(req, res) {
     }
   }).spread(function(user, isNew) {
     if (isNew) {
-      res.redirect('/tweets');
+      res.redirect('/saves');
     } else {
       req.flash('danger', 'Username already taken. Please choose another.')
       res.redirect('/auth/signup');
@@ -53,6 +61,21 @@ app.post('/auth/login', function(req, res) {
   // just return all of the form data to the client for now.
   res.render('login');
 });
+
+/* ABOUT SECTION */
+
+app.get('/about', function(req, res) {
+  res.render('about');
+});
+
+
+/*SAVES PAGE */
+
+app.get('/saves', function(req, res) {
+  res.render('saves');
+});
+
+
 
 
 var port = 3000;
