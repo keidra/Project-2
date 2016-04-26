@@ -5,62 +5,50 @@ var ejsLayouts = require('express-ejs-layouts');
 var flash = require('connect-flash');
 var session = require('express-session');
 
+
 // var tweetCtrl = require('./controllers/tweet');
+var authCtrl = require('./controllers/auth');
 var db = require('./models');
+
+
 
 var app = express();
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/static'));
+
 app.use(session({
   secret: 'dsalkfjasdflkjgdfblknbadiadsnkl',
   resave: false,
   saveUninitialized: true
 }));
 
-// app.use('/tweets', tweetCtrl);
 
 app.use(flash());
 
+app.use(function(req, res, next) {
+  if (req.session.userId) {
+    db.user.findById(req.session.userId).then(function(user) {
+      req.currentUser = user;
+      res.locals.currentUser = user;
+      next();
+    })
+  } else {
+    req.currentUser = false;
+    res.locals.currentUser = false;
+    next();
+  }
+});
+
+app.use('/auth', authCtrl);
+
 
 app.get('/', function(req, res) {
-  res.render('index');
+  res.render('index', {alerts: req.flash()});
 });
 
-app.get('/auth/signup', function(req, res) {
-  res.render('signup', {alerts: req.flash()});
-});
 
-app.post('/auth/signup', function(req, res) {
-  console.log(req.body);
-  db.user.findOrCreate({
-    where: {
-      username: req.body.username,
-    },
-    defaults: {
-      password: req.body.password
-    }
-  }).spread(function(user, isNew) {
-    if (isNew) {
-      res.redirect('/saves');
-    } else {
-      req.flash('danger', 'Username already taken. Please choose another.')
-      res.redirect('/auth/signup');
-    }
-  }).catch(function(err) {
-    res.send(err);
-  });
-});
-
-app.get('/auth/login', function(req, res) {
-  res.render('signup');
-});
-
-app.post('/auth/login', function(req, res) {
-  // just return all of the form data to the client for now.
-  res.render('login');
-});
 
 /* ABOUT SECTION */
 
@@ -75,8 +63,11 @@ app.get('/saves', function(req, res) {
   res.render('saves');
 });
 
+/* LOGIN LANDING PAGE */
 
-
+app.get('/login', function(req, res) {
+  res.render('login');
+});
 
 var port = 3000;
 app.listen(port, function() {

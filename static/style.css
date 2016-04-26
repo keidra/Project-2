@@ -1,5 +1,4 @@
 body {
-  background-color: white;
   height: 100%;
 }
 
@@ -26,11 +25,389 @@ body {
   background-color: transparent;
   border-color: transparent;
   border-bottom: 3px solid black;
-}
-
-@media (min-width: 768px) {
-.navbar {
   border-radius: 0px;
 }
 
+
+/* Reset */
+------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
 }
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    background-color: white;
+    font-size: 20px;
+    color: #666;
+    font-family: 'Squada One',helvetica,sans-serif;
+    padding-top: 10px;
+
+}
+
+ol,ul {
+    list-style: none;
+    margin: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #111;
+}
+
+a,img {
+    outline: none;
+    border: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header,nav,section {
+    display: block;
+}
+
+/*html, body {margin: 0; height: 100%; overflow: hidden}*/
+
+/* Structure */
+#wrapper {
+    width: 100%;
+/*max-width: 920px;*/
+    margin: auto;
+    padding: 0;
+}
+
+#main {
+    width: 60%;
+    margin-right: 5%;
+    float: left;
+}
+
+a:hover {
+    background-color: transparent;
+}
+
+/* Logo H1 */
+header h1 {
+    height: 70px;
+    width: 160px;
+    float: left;
+    display: block;
+    text-indent: -9999px;
+}
+
+/* Nav */
+header nav {
+    margin-top: 40px;
+    background-color: transparent;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 15px;
+    background-color: transparent;
+}
+
+#skipTo {
+    display: none;
+}
+
+#skipTo li {
+    background: #b1fffc;
+}
+
+/* Banner */
+#banner {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#banner img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    #skipTo {
+        display: block;
+    }
+
+    header nav,#main,aside {
+        float: left;
+        clear: left;
+        margin: 0 0 10px;
+        width: 100%;
+    }
+
+    header nav li {
+        margin: 0;
+        background: #efefef;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    header nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* NAV-BAR */
+
+.navbar-default .navbar-nav>li>a {
+     color: black; 
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.navbar-inverse {
+    background: transparent;
+    border: none;
+    border-bottom: .5px solid #000;
+    border-radius: initial;
+}
+
+#myNavbar > ul > li.active > a {
+    color: #000;
+    background-color: transparent;
+}
+
+#myNavbar > ul > li:nth-child(2) > a {
+    color: #000;
+}
+
+#myNavbar > ul > li:nth-child(3) > a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+
+#myNavbar > ul > li:nth-child(4) > a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form {
+    border-color: transparent;
+    background: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+#myNavbar > ul {
+    padding-right: 5px;
+    font-size: 20px;
+    margin-right: -33px;
+}
+
+.nav {
+    list-style: none;
+    text-align: right;
+    font-family: 'Squada One';
+}
+
+#myNavbar > ul > li:nth-child(4) > button {
+    background-color: transparent;
+    font-size: inherit;
+    border: none;
+    color: #000;
+    padding-top: 11px;
+}
+
+body > div > nav > div > div.navbar-header > button {
+    margin-right: -7px;
+}
+
+#gridSystemModalLabel {
+    text-align: center;
+    font-size: 27px;
+}
+
+body > div.container > div.modal.fade.bd-example-modal-md.in > div > div {
+    color: black;
+}
+
+.row {
+    margin-left: 101px;
+    display: inline-block;
+}
+
+body > div.container > div.modal.fade.bd-example-modal-md.in > div > div > div.modal-body > div:nth-child(2) > div.col-md-4.col-md-offset-0 {
+    margin-left: -7px;
+}
+
+body > div.container > div.modal.fade.bd-example-modal-md.in > div > div > div.modal-body > div:nth-child(2) > div.col-md-2.col-md-offset {
+    margin-left: 3px;
+}
+
+/* ABOUT ME */
+
+.about {
+    text-align: center;
+    padding-top: 
+}
+
+#sec4 > div > div > img {
+   width: 80%;
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+}
+
+#sec4 > div > div > h2 {
+    font-size: 80px;
+    color: black;
+}
+
+#sec4 > div > div > p {
+    color: black;
+    padding-top: 40px;
+}
+
+
+ /* PORTFOLIO */
+
+ .portfolio {
+    text-align: center;
+    font-family: 'Squada One'
+    font-weight: 800;
+ }
+
+.card {
+  margin: 2rem auto;
+}
+.image1 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  transition: 0.1s linear;
+  background-image: url(images/word3.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.image2 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  transition: 0.1s linear;
+  background-image: url(images/what.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.image3 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  transition: 0.1s linear;
+  background-image: url(images/water.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  font-family: 'Squada One';
+  font-weight: bold;
+}
+
+.card-text {
+    text-align: ;
+}
+
+body > div > div.row {
+    margin-left: 0px; 
+ /*   display: inline;*/
+}
+
+body > div > h1 {
+    margin-top: 60px;
+    padding-bottom: 40px;
+    font-size: 80px;
+    padding-left: 20px;
+}
+
+body > div > div.row > div:nth-child(2) > div > div.card-block > a {
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+
+}
+
+body > div > div.row > div:nth-child(1) > div > div.card-block > a {
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+}
+
+body > div > div.row > div:nth-child(3) > div > div.card-block > a {
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* MAIN PAGE */
+
+body > div > form > div > input {
+  text-align: center;
+
+}
+
+.login {
+  text-align: center;
+}
+
+.login h1 {
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
