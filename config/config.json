@@ -12,7 +12,8 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "waterdata"
+    "database": "waterdata",
+    "dialect": "postgres"
   }
 }
 
