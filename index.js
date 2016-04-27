@@ -2,13 +2,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var ejsLayouts = require('express-ejs-layouts');
+var request=require('request');
 var flash = require('connect-flash');
 var session = require('express-session');
-var db = require('./models');
 var app = express();
 
-
+var saveCtrl = require('./controllers/saved');
 var authCtrl = require('./controllers/auth');
+var db = require('./models');
 
 
 app.set('view engine', 'ejs');
@@ -76,29 +77,22 @@ app.get('/login', function(req, res) {
   res.render('login');
 });
 
-/* SEARCH */
-app.get('/', function(req, res) {
-  db.place.findAll().then(function(places) {
-    res.render('index', {places});
-  }).catch(function(err) {
-    res.send({message: 'error', error: err});
-  })
-});
 
-app.post('/places', function(req, res) {
-  db.place.create({
-    name: req.body.name,
-    address: req.body.address
-  }).then(function(place) {
-    res.redirect('/');
-  }).catch(function(err) {
-    res.send({message: 'error', error: err});
-  })
+
+/*NEWs*/
+// app.get('/news', function(req, res) {
+//   request('https://api.newsapi.aylien.com/api/v1/stories?title=water&published_at.start=NOW-60DAYS&published_at.end=NOW&categories.id%5B%5D=IAB7&categories.taxonomy=iab-qag&source.locations.country%5B%5D=US', function(response, body) {
+//      var data =JSON.parse(body);
+//      res.render('news', {query: data.Stories});
+//      console.log(query.title)
+//   });
+// });
+
+app.get('/news', function(req, res) {
+  res.render('news');
 });
 
 
+app.listen(process.env.PORT || 3000);
 
-var port = 3000;
-app.listen(port, function() {
-  console.log("You're listening to the smooth sounds of port " + port);
-});
+

@@ -280,85 +280,16 @@ body > div.container > div.modal.fade.bd-example-modal-md.in > div > div > div.m
     margin-left: 3px;
 }
 
-/* ABOUT ME */
+/* ABOUT SECTION*/
 
 .about {
     text-align: center;
     padding-top: 
 }
 
-#sec4 > div > div > img {
-   width: 80%;
-   display: block;
-   margin: 0 auto;
-   text-align: center;
-}
-
-#sec4 > div > div > h2 {
-    font-size: 80px;
-    color: black;
-}
-
-#sec4 > div > div > p {
-    color: black;
-    padding-top: 40px;
-}
-
-
- /* PORTFOLIO */
-
- .portfolio {
-    text-align: center;
-    font-family: 'Squada One'
-    font-weight: 800;
- }
-
-.card {
-  margin: 2rem auto;
-}
-.image1 {
-  width: 100%;
-  height: 0;
-  padding-bottom: 50%;
-  transition: 0.1s linear;
-  background-image: url(images/word3.png);
-  background-size: cover;
-  background-position: center center;
-}
-
-.image2 {
-  width: 100%;
-  height: 0;
-  padding-bottom: 50%;
-  transition: 0.1s linear;
-  background-image: url(images/what.png);
-  background-size: cover;
-  background-position: center center;
-}
-
-.image3 {
-  width: 100%;
-  height: 0;
-  padding-bottom: 50%;
-  transition: 0.1s linear;
-  background-image: url(images/water.png);
-  background-size: cover;
-  background-position: center center;
-}
-
-.card-title {
-  margin-bottom: 1rem;
-  font-family: 'Squada One';
-  font-weight: bold;
-}
-
-.card-text {
-    text-align: ;
-}
 
 body > div > div.row {
     margin-left: 0px; 
- /*   display: inline;*/
 }
 
 body > div > h1 {
@@ -430,6 +361,31 @@ body > div > div:nth-child(2) {
     text-align: center;
 }
 
+
+/* MARKERS */
+
+#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p {
+  margin-left: 40px;
+}
+
+#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div {
+  text-align: center;
+}
+
+#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p > img {
+  width: 100%;
+}
+
+
+/* NEWS PAGE */
+
+.news {
+  text-align: center;
+}
+
+body > div > div > h1 {
+  font-size: 70px;
+}
 
 
 

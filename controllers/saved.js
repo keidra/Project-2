@@ -9,11 +9,10 @@ router.get('/', function(req, res) {
     res.redirect('/');
   }
 
-
-  db.tweet.findAll({
+  db.save.findAll({
     include: [db.user]
   }).then(function(saveds) {
-    console.log(saveds);
+    console.log(saves);
     res.render('saved', {saved: saved, alerts: req.flash()});
   });
 });
@@ -24,18 +23,5 @@ router.get('/new', function(req, res){
 
 router.post('/', function(req, res){
   console.log(req.body);
-
-  db.user.find({
-    where: { username: req.currentUser.username}
-  }).then(function(user) {
-    user.createTweet({
-      content: req.body.content
-    }).then(function(tweet) {
-      res.redirect('/saves');
-    });
-  }).catch(function(err) {
-    res.send(err);
-  });
 });
-
 module.exports = router;

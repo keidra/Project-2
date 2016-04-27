@@ -1,53 +1,3 @@
-// var initMap = function() {
-
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     center: {lat: -34.397, lng: 150.644},
-//     zoom: 10
-//   });
-
-//   // if brower support available, ask user for location data and set the map view
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//       initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-//       map.setCenter(initialLocation);
-//     });
-//   }
-
-// };
-// function initMap() {
-//   var myLatLng = {lat: 47.6062095, lng: -122.3320708};
-
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 10,
-//     center: myLatLng
-//   });
-
-//    var contentString = '<div id="content">'+
-//       '<div id="siteNotice">'+
-//       '</div>'+
-//       '<h1 id="firstHeading" class="firstHeading">Seattle</h1>'+
-//       '<div id="bodyContent">'+
-//       '<p><b>Current Report:</b>2014<b></b>' +
-//       '<p><a href="#">Click to access report!</a>'+
-//       '</div>'+
-//       '</div>';
-
-//   var infowindow = new google.maps.InfoWindow({
-//     content: contentString
-//   });
-
-//   var marker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-//     title: 'Seattle'
-//   });
-//   marker.addListener('click', function() {
-//     infowindow.open(map, marker);
-//   });
-// }
-
-
-
 jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
@@ -71,26 +21,27 @@ function initialize() {
         ['Seattle, Washington', 47.6062095,-122.3320708],
         ['Redmond, Washington', 47.6740,-122.1215],
         ['Bellevue, Washington', 47.6104,-122.2007], 
-        ['Renton, Washington', 47.4829,-122.2171]
+        ['Renton, Washington', 47.4829,-122.2171], 
+        ['Bothell, Washington', 47.7623,-122.2054]
     ];
                         
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
         '<h3>Seattle</h3>' +
-        '<p>The London Eye is a giant Ferris s 135 metres (443 ft)</p>' +'</div>'],
+        '<p><strong>Report Year:</strong> 2014 <br> <br> <img src="reports/SEATTLE.jpg"><a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view full report!</a></p>' +'</div>'],
         ['<div class="info_content">' +
         '<h3>Redmond</h3>' +
-        '<p>The Palace of Westminster is the meeting place of Parliament after its tenants.</p>' +
-        '</div>'], 
+        '<p>Report Year: 2014 <br> <br> <img src="reports/REDMOND.jpg"><a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view report!</a></p>' +'</div>'], 
         ['<div class="info_content">' +
         '<h3>Bellevue</h3>' +
-        '<p>The Palace of Westminster is the meeting  the Parliament after its tenants.</p>' +
-        '</div>'],
+        '<p>Current Report Year: 2014 <br> <br> <img src="reports/BELLEVUE.jpg"> <a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view report!</a></p>' +'</div>'],
         ['<div class="info_content">' +
         '<h3>Renton</h3>' +
-        '<p>The Palace of Westminster is the meeting  the Parliament after its tenants.</p>' +
-        '</div>']
+        '<p>Current Report Year: 2014 <br> <br> <img src="reports/RENTON.jpg"> <a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view report!</a></p>' +'</div>'], 
+        ['<div class="info_content">' +
+        '<h3>Bothell</h3>' +
+        '<p>Current Report Year: 2014 <br> <br> <img src="reports/BOTHELL.jpg"><a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view report!</a></p>' +'</div>']
     ];
         
     // Display multiple markers on a map
@@ -127,21 +78,7 @@ function initialize() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* NAVBAR */
 
 $(function() {
   // Setup drop down menu
