@@ -12,7 +12,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "waterdata"
+    "database": "waterdata",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+
   }
 }
 
