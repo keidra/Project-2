@@ -4,15 +4,13 @@ var bodyParser = require('body-parser');
 var ejsLayouts = require('express-ejs-layouts');
 var flash = require('connect-flash');
 var session = require('express-session');
-
-
-// var tweetCtrl = require('./controllers/tweet');
-var authCtrl = require('./controllers/auth');
 var db = require('./models');
-
-
-
 var app = express();
+
+
+var authCtrl = require('./controllers/auth');
+
+
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -49,6 +47,15 @@ app.get('/', function(req, res) {
 });
 
 
+app.get('/searchresults', function(req, res) {
+  var query = req.query.q;
+  
+});
+
+// db.waterdata.findAll().then(function(locations) {
+//   console.log(locations);
+//   // users will be an array of all User instances
+// });
 
 /* ABOUT SECTION */
 
@@ -68,6 +75,28 @@ app.get('/saves', function(req, res) {
 app.get('/login', function(req, res) {
   res.render('login');
 });
+
+/* SEARCH */
+app.get('/', function(req, res) {
+  db.place.findAll().then(function(places) {
+    res.render('index', {places});
+  }).catch(function(err) {
+    res.send({message: 'error', error: err});
+  })
+});
+
+app.post('/places', function(req, res) {
+  db.place.create({
+    name: req.body.name,
+    address: req.body.address
+  }).then(function(place) {
+    res.redirect('/');
+  }).catch(function(err) {
+    res.send({message: 'error', error: err});
+  })
+});
+
+
 
 var port = 3000;
 app.listen(port, function() {

@@ -1,16 +1,16 @@
-<h1 class="app">Water Wise</h1>
+<div class"title">
+<img src="water3.png">
+<h1>WATER WISE</h1>
+<h3>Click a location to learn more about the water quality!</h3>
+</div>
 
-  <div id="wrapper">
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
 
-    <header>
-        <div id="banner"><img alt="banner" src="water.png">
-        </div>
-    </header>
+<!-- scripts -->
 
-  </div>
-
-<form action="/results" method="GET" role="form">
-  <div class="form-group">
-    <input type="text" class="form-control" id="" placeholder="Search by Location" name="q"><button type="submit" class="btn btn-primary">SEARCH</button>
-  </div>
-</form>
+<script src="/main.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.GOOGLE_MAPS_KEY %>&callback=initMap">
+</script>
