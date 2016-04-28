@@ -15,27 +15,20 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
       },
-       authenticate: function(username, password, callback) {
-        // find the user in the database
-        this.find({where: {username: username}}).then(function(user) {
-          // if there's no username with the username then raise a 'no user' error
-          if (!user) callback(null, false);
-          // if a user record comes back, compare the password to the hash
-          bcrypt.compare(password, user.password, function(err, result) {
-            // if there's a database error then raise 'sorry, something went wrong'
-            if (err) return callback(err);
-            // the passwords match. return the user info
-            if (result) {
-              callback(null, user);
-            // otherwise, raise a 'wrong password' error
-            // the password is incorrect.
-            }  else {
-              callback(null, false);
-            }
-          })
-        }).catch(callback);
-      }
-    }, 
+     authenticate: function(username, password, callback) {
+      console.log(username);
+    this.find({
+      where: {username: username}
+    }).then(function(user) {
+      if (!user) callback(null, false);
+      bcrypt.compare(password, user.password, function(err, result) {
+        if (err) return callback(err);
+        callback(null, result ? user : false);
+      });
+    }).catch(callback);
+
+  }
+},
     hooks: {
       beforeCreate: function(user, options, callback) {
         // if the user gave a password then hash it

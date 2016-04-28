@@ -537,8 +537,17 @@ footer {
     }
 }
 
-©
 
+.lead {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+#contact > p {
+    margin-top: 175px;
+}
 
 
 
