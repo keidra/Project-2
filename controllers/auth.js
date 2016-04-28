@@ -4,20 +4,23 @@ var db = require('../models');
 
 router.get('/logout', function(req, res) {
   req.currentUser = false;
-  res.locals.currentUser = false;
+  // res.locals.currentUser = false;
   res.redirect('/');
 });
 
-router.post('/signin', function(req, res) {
+router.post('/login', function(req, res) {
   // proving we get the username and password
   var user = req.body.username;
   var pass = req.body.password;
   db.user.authenticate(user, pass, function(err, user) {
     // user successfully logged in.
-    if (user) {
+    if (err) {
+      res.send(err);
+    } else if (user) {
       req.session.userId = user.id;
-      req.flash('success', 'Successfully logged in.');
-      res.redirect('/login');
+      res.redirect('/');
+    } else {
+      res.send('user and/or password invalid');
     }
   });
 });

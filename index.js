@@ -7,7 +7,7 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var app = express();
 
-var saveCtrl = require('./controllers/saved');
+
 var authCtrl = require('./controllers/auth');
 var db = require('./models');
 
@@ -89,7 +89,12 @@ app.get('/login', function(req, res) {
 // });
 
 app.get('/news', function(req, res) {
-  res.render('news');
+  if (req.currenUser) {
+    res.render('news');
+  } else {
+    req.flash('danger','You must be logged in to view this page');
+    res.redirect('/')
+  }
 });
 
 
