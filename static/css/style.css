@@ -1,38 +1,36 @@
 body {
-  height: 100%;
+    height: 100%;
 }
 
 .container {
-  background-color: white;
-  min-height: 100%;
-  padding-top: 1em;
-  padding-bottom: 1em;
+    background-color: #fff;
+    min-height: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .username {
-  font-weight: bold;
-  text-decoration: underline;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .app {
-  text-align: center;
-  padding-top: 50px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 /* NavBar Styling */
-
 .navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-  border-bottom: 3px solid black;
-  border-radius: 0px;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 3px solid #000;
+    border-radius: 0;
 }
 
 body > div > div:nth-child(2) > img {
-  display: inline;
-  margin-bottom: 10px;
+    display: inline;
+    margin-bottom: 10px;
 }
-
 
 /* Reset */
 ------------------------------------------------------------ */
@@ -47,12 +45,11 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: #fff;
     font-size: 20px;
     color: #666;
     font-family: 'Squada One',helvetica,sans-serif;
     padding-top: 10px;
-
 }
 
 ol,ul {
@@ -93,7 +90,6 @@ header,nav,section {
 }
 
 /*html, body {margin: 0; height: 100%; overflow: hidden}*/
-
 /* Structure */
 #wrapper {
     width: 100%;
@@ -184,13 +180,12 @@ header nav li {
 }
 
 /* NAV-BAR */
-
 .navbar-default .navbar-nav>li>a {
-     color: black; 
+    color: #000;
 }
 
 .navbar-default .navbar-brand {
-    color: black;
+    color: #000;
 }
 
 .navbar-inverse {
@@ -264,7 +259,7 @@ body > div > nav > div > div.navbar-header > button {
 }
 
 body > div.container > div.modal.fade.bd-example-modal-md.in > div > div {
-    color: black;
+    color: #000;
 }
 
 .row {
@@ -281,15 +276,13 @@ body > div.container > div.modal.fade.bd-example-modal-md.in > div > div > div.m
 }
 
 /* ABOUT SECTION*/
-
 .about {
     text-align: center;
-    padding-top: 
+    padding-top: ;
 }
 
-
 body > div > div.row {
-    margin-left: 0px; 
+    margin-left: 0;
 }
 
 body > div > h1 {
@@ -300,51 +293,49 @@ body > div > h1 {
 }
 
 body > div > div.row > div:nth-child(2) > div > div.card-block > a {
-   display: block;
-   margin: 0 auto;
-   text-align: center;
-
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 body > div > div.row > div:nth-child(1) > div > div.card-block > a {
-   display: block;
-   margin: 0 auto;
-   text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 body > div > div.row > div:nth-child(3) > div > div.card-block > a {
-   display: block;
-   margin: 0 auto;
-   text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
-
 /* MAIN PAGE */
-
 body > div > form > div > input {
-  text-align: center;
-
+    text-align: center;
 }
 
 .login {
-  text-align: center;
+    text-align: center;
 }
 
 .login h1 {
-  font-size: 40px;
+    font-size: 40px;
 }
- .map {
-  text-align: center;
-  color: black;
- }
+
+.map {
+    text-align: center;
+    color: #000;
+}
+
 #wrapper > h2 {
-  font-size: 75px;
-  font-family: 'Squada One';  
+    font-size: 75px;
+    font-family: 'Squada One';
 }
 
 #map_wrapper {
@@ -357,44 +348,39 @@ body > div > form > div > input {
 }
 
 body > div > div:nth-child(2) {
-      display: block;
+    display: block;
     text-align: center;
 }
 
-
 /* MARKERS */
-
 #map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p {
-  margin-left: 40px;
+    margin-left: 40px;
 }
 
 #map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div {
-  text-align: center;
+    text-align: center;
 }
 
 #map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p > img {
-  width: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
-
 /* NEWS PAGE */
-
 .news {
-  text-align: center;
+    text-align: center;
 }
 
 body > div > div > h1 {
-  font-size: 70px;
+    font-size: 70px;
 }
 
 /* SIGNUP */
-
 .signup {
-  text-align: center;
+    text-align: center;
 }
 
 /* ABOUT PAGE */
-
 .featurette-divider {
     margin: 80px 0;
 }
@@ -505,7 +491,7 @@ footer {
 
 @media(max-width:640px) {
     .headline {
-        padding: 75px 0 25px 0;
+        padding: 75px 0 25px;
     }
 
     .headline h1 {
@@ -537,7 +523,6 @@ footer {
     }
 }
 
-
 .lead {
     margin-bottom: 20px;
     font-size: 2em;
@@ -548,8 +533,3 @@ footer {
 #contact > p {
     margin-top: 175px;
 }
-
-
-
-
-
