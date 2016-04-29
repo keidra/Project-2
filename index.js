@@ -6,6 +6,9 @@ var session = require('express-session');
 var authCtrl = require('./controllers/auth');
 var db = require('./models');
 var app = express();
+
+
+
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({
@@ -51,11 +54,34 @@ app.get('/login', function(req, res) {
     res.render('login');
 });
 app.get('/news', function(req, res) {
-    if (req.currentUser) {
-        res.render('news');
-    } else {
-        req.flash('danger', 'You must be logged in to view this page');
-        res.redirect('/')
-    }
+     db.bottle.findAll().then(function(bottles) {
+        res.render('news', {bottles:bottles});
+    });
 });
+    // if (req.currentUser) {
+    //     res.render('news');
+    // } else {
+    //     req.flash('danger', 'You must be logged in to view this page');
+    //     res.redirect('/')
+    // }
+
+
+// app.post('/news', function(req, res) {
+//     db.bottle.create({url: result.url}).then(function(bottle) {
+//       res.redirect('news');
+//     });
+//   });
+// app.get('/news', function(req, res) {
+//     db.bottle.findAll().then(function(bottles) {
+//         res.send('news', {bottles:bottles});
+//     });
+// });
+
+
+
+
+
+
+
+
 app.listen(process.env.PORT || 3000);

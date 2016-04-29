@@ -1,13 +1,29 @@
 
 <div class"news">
-<h1>Facts</h1>
 
-<ul>
-  <li>Fact #1</li>
-  <li>Fact #2</li>
-  <li>Fact #3</li>
-</ul>
-
-
+<h1>Bottled Water</h1>
 
 </div>
+
+<div class="row">
+<div class="col-md-4">
+<%bottles.forEach(function(bottle) {%>
+<img src="<%=bottle.image%>"> <button><a href="<%=bottle.url%>">Report</a></button>
+<% }) %>
+</div>
+</div>
+
+
+<!-- <div class="row">
+  <div class="col-md-4">
+  <div class="card">
+  <div class="card-img-top">
+    <a href="http://keidra.github.io/Project-1-Game/game/"><div class="image1"></div></a>
+  </div>
+  <div class="card-block">
+    <h4 class="card-title text-center">WORD SCRAMBLE</h4>
+    <p class="card-text">A simple word scramble game for 1 player, created with jQuery.</p>
+    <a href="https://github.com/keidra/Project-1-Game" class="fa fa-github-square fa-3x"></a>
+  </div>
+</div>
+</div> -->
