@@ -366,9 +366,23 @@ body > div > div:nth-child(2) {
     padding: 20px;
 }
 
-/* NEWS PAGE */
+/* BOTTLE PAGE */
 .news {
     text-align: center;
+}
+
+td, th {
+    padding: 25px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: -65px;
+}
+
+body > div > div.row > table > tbody > tr > td:nth-child(3) {
+    padding-left: 60px;
 }
 
 body > div > div > h1 {
@@ -533,3 +547,24 @@ footer {
 #contact > p {
     margin-top: 175px;
 }
+
+
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    font-size: 2em;
+    color: black;
+    font-family: 'Squada One';
+}
+
+#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > h3 {
+    color: black;
+    font-family: 'Squada One';
+    font-size: 3em;
+}
+
+body > div > nav > div > div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li.dropdown.open > div > form > input.btn.btn-primary {
+    background-color: black;
+}
+

@@ -53,12 +53,11 @@ app.get('/saves', function(req, res) {
 app.get('/login', function(req, res) {
     res.render('login');
 });
-app.get('/news', function(req, res) {
+app.get('/bottle', function(req, res) {
      db.bottle.findAll().then(function(bottles) {
-        res.render('news', {bottles:bottles});
+        res.render('bottle', {bottles:bottles});
     });
 });
-    // if (req.currentUser) {
 
 
 

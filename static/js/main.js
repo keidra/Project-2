@@ -23,16 +23,17 @@ function initialize() {
             ['Bellevue, Washington', 47.6104, -122.2007],
             ['Renton, Washington', 47.4829, -122.2171],
             ['Bothell, Washington', 47.7623, -122.2054], 
-            ['Kent, Washington', 47.3809, -122.2348]
+            ['Kent, Washington', 47.3809, -122.2348],
+            ['Tacoma, Washington', 47.2529, -122.4443]
         ];
         // Info Window Content
         var infoWindowContent = [
             ['<div class="info_content">' + '<h3>Seattle</h3>' +
-                '<p><strong>Report Year:</strong> 2014 <br> <br> <img src="reports/SEATTLE.jpg"><a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view full report!</a></p>' +
+                '<p>Report Year: 2014 <br> <br> <img src="reports/SEATTLE.jpg"><a href="http://www.seattle.gov/util/cs/groups/public/@spu/@water/documents/webcontent/1_039275.pdf">Click Here to view full report!</a></p>' +
                 '</div>'
             ],
             ['<div class="info_content">' + '<h3>Redmond</h3>' +
-                '<p>Report Year: 2014 <br> <br> <img src="reports/REDMOND.jpg"><a href="http://www.redmond.gov/common/pages/UserFile.aspx?fileId=129718">Click Here to view full report!</a></p>' +
+                '<p>Report Year: 2014 </strong><br> <br> <img src="reports/REDMOND.jpg"><a href="http://www.redmond.gov/common/pages/UserFile.aspx?fileId=129718">Click Here to view full report!</a></p>' +
                 '</div>'
             ],
             ['<div class="info_content">' + '<h3>Bellevue</h3>' +
@@ -49,6 +50,10 @@ function initialize() {
             ], 
             ['<div class="info_content">' + '<h3>Kent</h3>' +
                 '<p>Current Report Year: 2014 <br> <br> <img src="reports/KENT.jpg"><a href="http://kentwa.gov/WaterQualityReport/">Click Here to view full report!</a></p>' +
+                '</div>'
+            ],
+            ['<div class="info_content">' + '<h3>Tacoma</h3>' +
+                '<p>Current Report Year: 2014 <br> <br> <img src="reports/TACOMA.jpg"><a href="https://www.mytpu.org/file_viewer.aspx?id=54632">Click Here to view full report!</a></p>' +
                 '</div>'
             ]
         ];
