@@ -59,7 +59,16 @@ app.get('/bottle', function(req, res) {
     });
 });
 
+/* ACCOUNT */
 
+app.get('/account', function(req, res) {
+  if (req.currentUser) {
+    res.render('account');
+  } else {
+    req.flash('danger', 'You must be logged in to view this page');
+    res.redirect('/');
+  }
+});
 
 
 
