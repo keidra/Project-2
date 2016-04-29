@@ -59,23 +59,6 @@ app.get('/news', function(req, res) {
     });
 });
     // if (req.currentUser) {
-    //     res.render('news');
-    // } else {
-    //     req.flash('danger', 'You must be logged in to view this page');
-    //     res.redirect('/')
-    // }
-
-
-// app.post('/news', function(req, res) {
-//     db.bottle.create({url: result.url}).then(function(bottle) {
-//       res.redirect('news');
-//     });
-//   });
-// app.get('/news', function(req, res) {
-//     db.bottle.findAll().then(function(bottles) {
-//         res.send('news', {bottles:bottles});
-//     });
-// });
 
 
 
