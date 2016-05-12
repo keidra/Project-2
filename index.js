@@ -53,6 +53,9 @@ app.get('/saves', function(req, res) {
 app.get('/login', function(req, res) {
     res.render('login');
 });
+
+/*BOTTLES*/
+
 app.get('/bottle', function(req, res) {
      db.bottle.findAll().then(function(bottles) {
         res.render('bottle', {bottles:bottles});
