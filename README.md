@@ -36,7 +36,7 @@ __________________________________________________________________
 
 Wireframes: http://imgur.com/a/OKTXv
 
-Project-Management: I used MeiterTask. 
+Project-Management: I used MeisterTask. 
 
 User Stories: https://docs.google.com/document/d/1u9MqNuwEZWW3ovfQQjCEXZ-30pBWjH9YBmRYVwvNRlY/edit?usp=sharing
 
