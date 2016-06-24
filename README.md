@@ -1,5 +1,5 @@
+![Alt text](Screen1.png?raw=true "Screenshot 1")
 
-General Assembly - Project #2: Full-stack Application
 _______________________________________________________________
 
 Water Wise - Version 1
