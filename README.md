@@ -1,5 +1,5 @@
 ![Alt text](Screen1.png?raw=true "Screenshot 1")
-![Alt text](Screen2.png?raw=true "Screenshot 2")
+![Alt text](screen2.png?raw=true "Screenshot 2")
 _______________________________________________________________
 
 Water Wise - Version 1
