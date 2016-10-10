@@ -366,6 +366,10 @@ body > div > div:nth-child(2) {
     padding: 20px;
 }
 
+.gm-style img {
+    max-width: 100% !important;
+}
+
 /* BOTTLE PAGE */
 .news {
     text-align: center;
