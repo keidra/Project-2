@@ -2,7 +2,7 @@ jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
     script.src =
-        "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+        "http://maps.google.com/maps/api/js?key=AIzaSyCrT3pkxZKknnB90gf4MnYBwrl6xbx8f-s&sensor=true&callback=initialize";
     document.body.appendChild(script);
 });
 
@@ -10,7 +10,7 @@ function initialize() {
         var map;
         var bounds = new google.maps.LatLngBounds();
         var mapOptions = {
-            mapTypeId: 'roadmap'
+            mapTypeId: 'roadmap'    
         };
         // Display a map on the page
         map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -97,3 +97,9 @@ $(function() {
         e.stopPropagation();
     });
 });
+
+
+// $(window).on("scroll", function() {
+//     var s = 200 - Math.min(200, $(document).scrollTop());
+//     $("img").width(s).height(s);
+// });

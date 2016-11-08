@@ -19,21 +19,13 @@ body {
     padding-top: 50px;
 }
 
-/* NavBar Styling */
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    border-bottom: 3px solid #000;
-    border-radius: 0;
-}
-
 body > div > div:nth-child(2) > img {
     display: inline;
     margin-bottom: 10px;
 }
 
 /* Reset */
------------------------------------------------------------- */
+------------------------------------------------------------
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +40,7 @@ body {
     background-color: #fff;
     font-size: 20px;
     color: #666;
-    font-family: 'Squada One',helvetica,sans-serif;
+    font-family: 'Raleway',helvetica,sans-serif;
     padding-top: 10px;
 }
 
@@ -71,7 +63,7 @@ a,img {
     outline: none;
     border: none;
     color: #000;
-    text-transform: uppercase;
+    top: -11px;
 }
 
 p {
@@ -180,6 +172,73 @@ header nav li {
 }
 
 /* NAV-BAR */
+
+.navbar-default {
+    background-color: #f9f9f9;
+    border-color: transparent;
+    border-bottom: 1px solid #d1d1d1;
+    border-radius: 0;
+    top: inherit;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+    border-left: 1px solid #d1d1d1;
+}
+
+.nav {
+    list-style: none;
+    text-align: right;
+    font-family: 'Raleway';
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 30px 40px 0px 40px;
+}
+
+.logo {
+    max-width: 35%;
+    position: absolute;
+    margin-top: -220px;
+    margin-left: -175px;
+}
+
+.statement {
+    text-align: left;
+    border-left: none !important;
+}
+
+.tag {
+    font-size: 0.7em;
+    margin-right: 140px;
+    font-weight: 300;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: transparent;
+}
+
+.maintext {
+    font-family: 'Raleway';
+    font-weight: 300;
+    margin-top: 100px;
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #000;
 }
@@ -235,11 +294,7 @@ header nav li {
     margin-right: -33px;
 }
 
-.nav {
-    list-style: none;
-    text-align: right;
-    font-family: 'Squada One';
-}
+
 
 #myNavbar > ul > li:nth-child(4) > button {
     background-color: transparent;
@@ -340,6 +395,7 @@ body > div > form > div > input {
 
 #map_wrapper {
     height: 600px;
+    margin-top: 100px;
 }
 
 #map_canvas {
