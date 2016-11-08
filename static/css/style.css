@@ -7,6 +7,7 @@ body {
     min-height: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
+    position: absolute;
 }
 
 .username {
@@ -237,6 +238,8 @@ header nav li {
     font-family: 'Raleway';
     font-weight: 300;
     margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 35px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -371,7 +374,7 @@ a:hover {
 }
 
 /* MAIN PAGE */
-body > div > form > div > input {
+/*body > div > form > div > input {
     text-align: center;
 }
 
@@ -381,14 +384,15 @@ body > div > form > div > input {
 
 .login h1 {
     font-size: 40px;
-}
+}*/
 
 .map {
-    text-align: center;
-    color: #000;
+    margin-left: 55px;
+
 }
 
-#wrapper > h2 {
+
+/*#wrapper > h2 {
     font-size: 75px;
     font-family: 'Squada One';
 }
@@ -401,7 +405,7 @@ body > div > form > div > input {
 #map_canvas {
     width: 100%;
     height: 100%;
-}
+}*/
 
 body > div > div:nth-child(2) {
     display: block;
@@ -409,7 +413,7 @@ body > div > div:nth-child(2) {
 }
 
 /* MARKERS */
-#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p {
+/*#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p {
     margin-left: 40px;
 }
 
@@ -425,7 +429,7 @@ body > div > div:nth-child(2) {
 .gm-style img {
     max-width: 100% !important;
 }
-
+*/
 /* BOTTLE PAGE */
 .news {
     text-align: center;
