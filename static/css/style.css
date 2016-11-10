@@ -545,6 +545,15 @@ body > div > nav {
 }
 
 
+.about-heading {
+    margin-top: -10px;
+}
+
+.about-logo {
+    max-width: 70%;
+    margin-top: -70px;
+}
+
 /* CONTACT */
 
 
