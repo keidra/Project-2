@@ -391,6 +391,14 @@ a:hover {
 
 }
 
+.report {
+    max-width: 95% !important;
+}
+
+.city {
+    text-align: center;
+}
+
 
 /*#wrapper > h2 {
     font-size: 75px;
@@ -411,6 +419,9 @@ body > div > div:nth-child(2) {
     display: block;
     text-align: center;
 }
+
+
+
 
 /* MARKERS */
 /*#map_canvas > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > p {

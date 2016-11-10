@@ -1,55 +1,60 @@
- // function initMap() {
- //        var map = new google.maps.Map(document.getElementById('map'), {
- //          center: {lat: -34.397, lng: 150.644},
- //          zoom: 6
- //        });
- //        var infoWindow = new google.maps.InfoWindow({map: map});
+function initMap() {
+  
+  var austin = {
+    info: '<div> <h2 class="city">Austin, Texas</h2><br>\
+          <a href="https://www.austintexas.gov/department/drinking-water-quality-report">Learn More!</a><br>\
+          <img src="./reports/austin.jpg" class="img-responsive report"><br>\
+          <div>',
+    lat: 30.307182,
+    long: -97.755996
+  };
 
- //        // Try HTML5 geolocation.
- //        if (navigator.geolocation) {
- //          navigator.geolocation.getCurrentPosition(function(position) {
- //            var pos = {
- //              lat: position.coords.latitude,
- //              lng: position.coords.longitude
- //            };
+  var dallas = {
+    info: '<strong>Chipotle on Belmont</strong><br>\
+          1025 W Belmont Ave<br> Chicago, IL 60657<br>\
+          <a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
+    lat: 32.794176,
+    long: -96.765503
+  };
 
- //            infoWindow.setPosition(pos);
- //            infoWindow.setContent('Location found.');
- //            map.setCenter(pos);
- //          }, function() {
- //            handleLocationError(true, infoWindow, map.getCenter());
- //          });
- //        } else {
- //          // Browser doesn't support Geolocation
- //          handleLocationError(false, infoWindow, map.getCenter());
- //        }
- //      }
+  var houston = {
+    info: '<strong>Chipotle on Sheridan</strong><br>\r\
+          6600 N Sheridan Rd<br> Chicago, IL 60626<br>\
+          <a href="https://goo.gl/maps/QGUrqZPsYp92">Get Directions</a>',
+    lat: 29.780472,
+    long: -95.386342
+  };
 
- //      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
- //        infoWindow.setPosition(pos);
- //        infoWindow.setContent(browserHasGeolocation ?
- //                              'Error: The Geolocation service failed.' :
- //                              'Error: Your browser doesn\'t support geolocation.');
- //      }
+  var locations = [
+      [austin.info, austin.lat, austin.long, 0],
+      [dallas.info, dallas.lat, dallas.long, 1],
+      [houston.info, houston.lat, houston.long, 2],
+    ];
 
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 6,
+    center: new google.maps.LatLng(30.307182, -97.755996),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
 
+  var infowindow = new google.maps.InfoWindow({});
 
- function initMap() {
-        var austin = {lat: 30.307182, lng: -97.755996};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: austin
-        });
-        var marker = new google.maps.Marker({
-          position: austin,
-          map: map
-        });
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+
+    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+      return function () {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
       }
-
-
-
-
-
+    })(marker, i));
+  }
+}
 
 
 
