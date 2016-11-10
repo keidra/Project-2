@@ -53,6 +53,21 @@ app.get('/saves', function(req, res) {
 app.get('/login', function(req, res) {
     res.render('login');
 });
+/* NEWS PAGE */
+app.get('/news', function(req, res) {
+    res.render('news');
+});
+
+/* CONTACT PAGE */
+app.get('/contact', function(req, res) {
+    res.render('contact');
+});
+
+/* THANKS PAGE */
+app.get('/thanks', function(req, res) {
+    res.render('thanks');
+});
+
 
 /*BOTTLES*/
 

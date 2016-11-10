@@ -1,0 +1,27 @@
+<!-- CONTACT ME -->
+<div class="container">  
+  <form id="contact" action="https://formspree.io/keidrabaldwin@gmail.com" method="POST">
+    <h3>Contact</h3>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" name="name" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" name="_replyto" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+        <input type="hidden" name="_next" value="/thanks" />
+    </fieldset>
+    <fieldset>
+        <input type="text" name="_gotcha" style="display:none" />
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" value="SEND" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+</div>
