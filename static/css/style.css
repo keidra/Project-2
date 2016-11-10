@@ -237,7 +237,7 @@ header nav li {
 .maintext {
     font-family: 'Raleway';
     font-weight: 300;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 100px;
     margin-bottom: 35px;
 }
@@ -395,9 +395,11 @@ a:hover {
     max-width: 95% !important;
 }
 
-.city {
+.city, .site {
     text-align: center;
 }
+
+
 
 
 /*#wrapper > h2 {

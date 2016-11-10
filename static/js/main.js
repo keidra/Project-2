@@ -1,8 +1,8 @@
 function initMap() {
   
   var austin = {
-    info: '<div> <h2 class="city">Austin, Texas</h2><br>\
-          <a href="https://www.austintexas.gov/department/drinking-water-quality-report">Learn More!</a><br>\
+    info: '<div> <h2 class="city">Austin, Texas</h2>\
+          <h4 class="site"><a href="https://www.austintexas.gov/department/drinking-water-quality-report">Official Website</a></h4><br>\
           <img src="./reports/austin.jpg" class="img-responsive report"><br>\
           <div>',
     lat: 30.307182,
@@ -10,17 +10,19 @@ function initMap() {
   };
 
   var dallas = {
-    info: '<strong>Chipotle on Belmont</strong><br>\
-          1025 W Belmont Ave<br> Chicago, IL 60657<br>\
-          <a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
+    info: '<div> <h2 class="city">Dallas, Texas</h2>\
+          <h4 class="site"><a href="http://dallascityhall.com/departments/waterutilities/Pages/water_quality_information.aspx">Official Website</a></h4><br>\
+          <img src="./reports/dallas.jpg" class="img-responsive report"><br>\
+          <div>',
     lat: 32.794176,
     long: -96.765503
   };
 
   var houston = {
-    info: '<strong>Chipotle on Sheridan</strong><br>\r\
-          6600 N Sheridan Rd<br> Chicago, IL 60626<br>\
-          <a href="https://goo.gl/maps/QGUrqZPsYp92">Get Directions</a>',
+    info: '<div> <h2 class="city">Houston, Texas</h2>\
+          <h4 class="site"><a href="https://www.publicworks.houstontx.gov/pud/drinkingwater.html">Official Website</a></h4><br>\
+          <img src="./reports/houston.jpg" class="img-responsive report"><br>\
+          <div>',
     lat: 29.780472,
     long: -95.386342
   };
